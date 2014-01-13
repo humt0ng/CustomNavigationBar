@@ -114,8 +114,17 @@
 #define ViewCtrlTopBarHeight                (IsiOS7Later ? (NaviBarHeight + StatusBarHeight) : NaviBarHeight)
 #define IsUseIOS7SystemSwipeGoBack          (IsiOS7Later ? YES : NO)
 
+//避免除以0
+#define SAFE_DIVISION(a,b) ((double)(a) / (double)((b) == 0 ? 1 : (b)))
 
 
+#define NUM_BOOL(a)         [NSNumber numberWithBool:(a)]
+#define NUM_INT(a)          [NSNumber numberWithInt:(a)]
+#define NUM_FLOAT(a)        [NSNumber numberWithFloat:(a)]
+#define NUM_LONG(a)         [NSNumber numberWithLong:(a)]
+#define NUM_LONGLONG(a)     [NSNumber numberWithLongLong:(a)]
+
+#define VAL_RECT(a)         [NSValue valueWithCGRect:(a)]
 
 //////////////////////////////////////////////////////////////////////////////////////////////
 #pragma mark - app define
